@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>Register</title>
+</head>
+<body>
+	{% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      <li class="{{ message.tags }}">{{ message }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+<form method="post" novalidate>
+  {% csrf_token %}
+ {% for field in user_form %}
+    <p>
+        {{ field.errors }}
+        {{ field.label_tag }} {{ field }}
+    </p>
+{% endfor %}
+{% for field in profile_form %}
+    <p>
+        {{ field.errors }}
+        {{ field.label_tag }} {{ field }}
+    </p>
+{% endfor %}
+  <button type="submit">Save changes</button>
+</form>
+</body>
+</html>

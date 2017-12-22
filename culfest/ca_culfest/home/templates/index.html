@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	
+		<title>STACK_MAP</title>
+	{% include "head.html" %}
+	
+	<style>
+
+		.link{
+		stroke: #aaa;
+		}
+
+		.node text {
+		stroke:#333;
+		cursos:pointer;
+
+		}
+
+		.node circle{
+		stroke:#fff;
+		stroke-width:3px;
+		}
+
+    #closing:hover{
+      cursor:move!important;
+    }
+
+	</style>
+
+	</head>
+
+	<body>
+	
+		<a href="{% url 'social:begin' 'facebook' %}" class="waves-effect waves-light btn">Fb Login</a>
+
+	</body>
+
+</html>
+
+
+
